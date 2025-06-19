@@ -10,11 +10,17 @@ export default function HomeScreen() {
     'Go to gym',
     'Walk dog'
   ]);
+
+  const addTask = (taskText) => {
+    if (taskText.trim() && !tasks.includes(taskText.trim())) {
+      setTasks([...tasks, taskText.trim()]);
+    }
+  };
   
   return (
     <SafeAreaView>
       <ToDoList tasks={tasks} />
-      <ToDoForm />
+      <ToDoForm addTask={addTask} />
     </SafeAreaView>
   );
 }

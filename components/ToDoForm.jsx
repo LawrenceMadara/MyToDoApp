@@ -1,5 +1,4 @@
-import React from 'react';
-import { View, TextInput, Button, StyleSheet } from 'react-native';
+import { Button, StyleSheet, TextInput, View } from 'react-native';
 
 const ToDoForm = () => {
   return (
